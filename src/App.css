@@ -12,3 +12,11 @@
   opacity: 0.85;
 }
 
+.auth-card {
+  max-width: 450px;
+}
+
+.auth-wrapper {
+  min-height: calc(100vh - 70px);
+}
+
