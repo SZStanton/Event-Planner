@@ -20,7 +20,7 @@ function Header() {
         Event Planner
       </Link>
 
-      {/* Mobile toggle button (Bootstrap collapse) */}
+      {/* Toggle button (Bootstrap collapse) */}
       <button
         className="navbar-toggler"
         type="button"
@@ -45,11 +45,6 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/add">
                   Add Event
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/help">
-                  Help
                 </Link>
               </li>
             </>
@@ -84,6 +79,12 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/register">
                   Register
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/help">
+                  Help
                 </Link>
               </li>
             </>

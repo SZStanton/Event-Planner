@@ -3,6 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import useEvents from '../context/useEvents';
 import EventForm from '../components/EventForm';
 
+// Default date and time based on current time
+const getTodayDate = () => {
+  return new Date().toISOString().split('T')[0];
+};
+const getCurrentTime = () => {
+  const now = new Date();
+  return now.toTimeString().slice(0, 5); // HH;MM format
+};
+
 //=== ADD EVENT PAGE ===
 // Allows users to create a new event
 function AddEvent() {
@@ -13,6 +22,12 @@ function AddEvent() {
   // Handle form submit
   const handleSubmit = formData => {
     const { name, date, time, location, description } = formData;
+    const today = new Date().toISOString().split('T')[0];
+
+    if (date < today) {
+      setError('Event date cannot be in the past.');
+      return;
+    }
 
     // Basic validation
     if (!name || !date || !time || !location || !description) {
@@ -39,8 +54,8 @@ function AddEvent() {
       <EventForm
         initialValues={{
           name: '',
-          date: '',
-          time: '',
+          date: getTodayDate(),
+          time: getCurrentTime(),
           location: '',
           description: '',
         }}

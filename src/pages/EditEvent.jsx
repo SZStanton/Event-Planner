@@ -23,6 +23,13 @@ function EditEvent() {
   // Handle form submission
   const handleSubmit = formData => {
     const { name, date, time, location, description } = formData;
+    const today = new Date().toISOString().split('T')[0];
+
+    if (date < today) {
+      setError('Event date cannot be in the past.');
+      return;
+    }
+
     // Basic validation
     if (!name || !date || !time || !location || !description) {
       setError('Please fill in all fields.');

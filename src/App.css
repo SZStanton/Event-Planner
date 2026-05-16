@@ -1,3 +1,17 @@
+body {
+  background-color: linear-gradient(180deg, #f5f9ff 0%, #eef4ff 100%);
+}
+
+/*=== Auth Pages ===*/
+.auth-card {
+  max-width: 450px;
+}
+
+.auth-wrapper {
+  min-height: calc(100vh - 70px);
+}
+
+/*=== Navbar ===*/
 .app-navbar {
   min-height: 60px;
 }
@@ -12,19 +26,24 @@
   opacity: 0.85;
 }
 
-.auth-card {
-  max-width: 450px;
+/*=== Event Form ===*/
+.event-form {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.auth-wrapper {
-  min-height: calc(100vh - 70px);
-}
-
+/*=== Event Cards ===*/
 .event-card {
   transition: transform 0.2s ease;
 }
 
 .event-card:hover {
   transform: translateY(-2px);
+}
+
+/*=== Help Page ===*/
+.help-card {
+  max-width: 800px;
+  margin: 0 auto;
 }
 

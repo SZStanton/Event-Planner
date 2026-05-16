@@ -30,6 +30,7 @@ function App() {
               {/* Public Routes */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/help" element={<Help />} />
 
               {/*Protected Routes*/}
               <Route
@@ -55,15 +56,6 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <EditEvent />
-                  </ProtectedRoute>
-                }
-              />
-
-              <Route
-                path="/help"
-                element={
-                  <ProtectedRoute>
-                    <Help />
                   </ProtectedRoute>
                 }
               />
