@@ -156,7 +156,7 @@ function AuthProvider({ children }) {
   }, []);
 
   //=== CONTEXT VALUES ===
-  // Memoised context values to reduce unnecessary re-renders
+  // Memorized context values to reduce unnecessary re-renders
   const value = useMemo(
     () => ({
       user,
