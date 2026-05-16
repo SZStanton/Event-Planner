@@ -20,3 +20,11 @@
   min-height: calc(100vh - 70px);
 }
 
+.event-card {
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+}
+
