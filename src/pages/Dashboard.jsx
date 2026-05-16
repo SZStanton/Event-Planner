@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useEvents from '../context/useEvents';
+import EventCard from '../components/EventCard';
 
 //=== DASHBOARD PAGE ===
 // Displays all upcoming events
@@ -26,47 +27,11 @@ function Dashboard() {
         <div className="alert alert-info">No events added yet.</div>
       )}
 
-      {/* Events list */}
+      {/* Events grid */}
       <div className="row g-3">
         {events.map(event => (
           <div className="col-12 col-md-6 col-lg-4" key={event.id}>
-            <div className="card h-100 shadow-sm">
-              <div className="card-body d-flex flex-column">
-                {/* Event title */}
-                <h5 className="card-title">{event.name}</h5>
-
-                {/* Event details */}
-                <p className="mb-2">
-                  <strong>Date:</strong> {event.date}
-                </p>
-                <p className="mb-2">
-                  <strong>Time:</strong> {event.time}
-                </p>
-                <p className="mb-2">
-                  <strong>Location:</strong> {event.location}
-                </p>
-                <p className="card-text">{event.description}</p>
-
-                {/* Action buttons */}
-                <div className="mt-auto d-flex gap-2">
-                  {/* Edit button */}
-                  <Link
-                    to={`/edit/${event.id}`}
-                    className="btn btn-warning btn-sm"
-                  >
-                    Edit
-                  </Link>
-
-                  {/* Delete button */}
-                  <button
-                    className="btn btn-danger btn-sm"
-                    onClick={() => deleteEvent(event.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </div>
+            <EventCard event={event} onDelete={deleteEvent} />
           </div>
         ))}
       </div>
