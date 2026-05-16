@@ -15,27 +15,27 @@ function Dashboard() {
           <p className="text-muted mb-0">Manage your upcoming events</p>
         </div>
 
-        {/* Dashboard heading */}
+        {/* Add event button */}
         <Link to="/add" className="btn btn-primary">
           Add Event
         </Link>
       </div>
 
-      {/* Dashboard heading */}
+      {/* Empty state */}
       {events.length === 0 && (
         <div className="alert alert-info">No events added yet.</div>
       )}
 
-      {/* Dashboard heading */}
+      {/* Events list */}
       <div className="row g-3">
         {events.map(event => (
           <div className="col-12 col-md-6 col-lg-4" key={event.id}>
             <div className="card h-100 shadow-sm">
               <div className="card-body d-flex flex-column">
-                {/* Dashboard heading */}
+                {/* Event title */}
                 <h5 className="card-title">{event.name}</h5>
 
-                {/* Dashboard heading */}
+                {/* Event details */}
                 <p className="mb-2">
                   <strong>Date:</strong> {event.date}
                 </p>
@@ -47,9 +47,9 @@ function Dashboard() {
                 </p>
                 <p className="card-text">{event.description}</p>
 
-                {/* Dashboard heading */}
+                {/* Action buttons */}
                 <div className="mt-auto d-flex gap-2">
-                  {/* Dashboard heading */}
+                  {/* Edit button */}
                   <Link
                     to={`/edit/${event.id}`}
                     className="btn btn-warning btn-sm"
@@ -57,7 +57,7 @@ function Dashboard() {
                     Edit
                   </Link>
 
-                  {/* Dashboard heading */}
+                  {/* Delete button */}
                   <button
                     className="btn btn-danger btn-sm"
                     onClick={() => deleteEvent(event.id)}
