@@ -18,16 +18,27 @@ The app uses React, Context API, and Bootstrap for styling and state management.
 ## Installation
 
 1. Clone or download the repository
+
+   ```bash
    git clone https://github.com/SZStanton/Event-Planner
+   ```
 
 2. Navigate into the project folder
 
 3. Install the dependencies with:
+
+   ```bash
    npm install
+   ```
 
 4. Run the App
+
+   ```bash
    npm run dev
+   ```
 
 5. Open the webpage on your browser
+   ```bash
    http://localhost:5173/
+   ```
 
