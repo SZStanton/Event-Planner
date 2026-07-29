@@ -8,7 +8,10 @@ A React + Vite web application for creating, managing, and tracking personal or 
   <tr>
     <td><img src="screenshots/login.png" width="300" alt="Login page"/></td>
     <td><img src="screenshots/dashboard.png" width="300" alt="Dashboard"/></td>
+  </tr>
+  <tr>
     <td><img src="screenshots/add-event.png" width="300" alt="Add event form"/></td>
+    <td><img src="screenshots/help.png" width="300" alt="Help page"/></td>
   </tr>
 </table>
 
